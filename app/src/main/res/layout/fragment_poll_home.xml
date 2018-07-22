@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/buttonMake"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="219dp"
+        android:background="@color/transBlue"
+        android:elevation="2dp"
+        android:stateListAnimator="@null"
+        android:text="@string/createPoll"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:translationZ="2dp"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <Button
+        android:id="@+id/buttonTake"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128dp"
+        android:background="@color/transBlue"
+        android:elevation="2dp"
+        android:stateListAnimator="@null"
+        android:text="@string/takePoll"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:translationZ="2dp"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="180dp" />
+</RelativeLayout>

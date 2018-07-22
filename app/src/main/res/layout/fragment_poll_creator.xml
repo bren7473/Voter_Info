@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PollFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="491dp"
+        android:layout_margin="10dp"
+        android:background="@color/creamBackground">
+
+        <EditText
+            android:id="@+id/textQuestion"
+            android:layout_width="305dp"
+            android:layout_height="102dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="14dp"
+            android:text="Insert Topic"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/textA"
+            android:layout_width="247dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="17dp"
+            android:text="option A"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxA"
+            app:layout_constraintTop_toBottomOf="@+id/textQuestion" />
+
+        <EditText
+            android:id="@+id/textB"
+            android:layout_width="247dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="11dp"
+            android:text="option B"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxB"
+            app:layout_constraintTop_toBottomOf="@+id/textA" />
+
+        <EditText
+            android:id="@+id/textC"
+            android:layout_width="247dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="11dp"
+            android:text="option C"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxC"
+            app:layout_constraintTop_toBottomOf="@+id/textB" />
+
+        <EditText
+            android:id="@+id/textD"
+            android:layout_width="247dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="11dp"
+            android:text="option D"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxD"
+            app:layout_constraintTop_toBottomOf="@+id/textC" />
+
+        <CheckBox
+            android:id="@+id/checkBoxA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="17dp"
+            android:text="A:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textQuestion" />
+
+        <CheckBox
+            android:id="@+id/checkBoxB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="41dp"
+            android:text="B:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxA" />
+
+        <CheckBox
+            android:id="@+id/checkBoxC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="41dp"
+            android:text="C:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxB" />
+
+        <CheckBox
+            android:id="@+id/checkBoxD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="41dp"
+            android:text="D:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxC" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            android:text="Poll Target"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textD" />
+
+        <EditText
+            android:id="@+id/textTarget"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textD" />
+
+        <Button
+            android:id="@+id/buttonCreatePoll"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_marginStart="51dp"
+            android:layout_marginTop="14dp"
+            android:background="@color/transBlue"
+            android:text="Send"
+            android:textColor="@color/creamBackground"
+            app:layout_constraintStart_toEndOf="@+id/textTarget"
+            app:layout_constraintTop_toBottomOf="@+id/textD" />
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>
