@@ -20,6 +20,8 @@ android {
 }
 
 dependencies {
+    //implementation 'com.amazonaws:aws-android-sdk-ddb-mapper:2.2.+'
+    implementation 'com.amazonaws:aws-android-sdk-ddb-mapper:2.6.+'
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'com.koushikdutta.ion:ion:2.+'
     implementation 'com.google.apis:google-api-services-civicinfo:v2-rev24-1.23.0'

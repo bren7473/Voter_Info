@@ -28,6 +28,7 @@ import static com.example.bren.voterinformation.Login.PREFERENCE;
 
 public class PollFragment extends Fragment {
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -47,6 +48,7 @@ public class PollFragment extends Fragment {
 
             }
         });
+
         Button houseButton = view.findViewById(R.id.buttonTake);
         houseButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -22,12 +22,23 @@ import android.widget.TextView;
 import com.amazonaws.mobile.client.AWSMobileClient;
 import com.amazonaws.mobile.client.AWSStartupHandler;
 import com.amazonaws.mobile.client.AWSStartupResult;
+import java.io.StringWriter;
+import java.io.PrintWriter;
+
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.mobile.config.AWSConfiguration;
+
+import com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 
 public class MainActivityBottom extends AppCompatActivity {
 
     private TextView mTextMessage;
+    DynamoDBMapper dynamoDBMapper;
+    private static final String TAG = "aws error";
 
-
+    StringWriter sw = new StringWriter();
+    PrintWriter pw = new PrintWriter(sw);
 
 
 
@@ -94,6 +105,51 @@ public class MainActivityBottom extends AppCompatActivity {
                 Log.d("YourMainActivity", "AWSMobileClient is instantiated and you are connected to AWS!");
             }
         }).execute();
+
+        // AWSMobileClient enables AWS user credentials to access your table
+        AWSMobileClient.getInstance().initialize(this).execute();
+
+        AWSCredentialsProvider credentialsProvider = AWSMobileClient.getInstance().getCredentialsProvider();
+        AWSConfiguration configuration = AWSMobileClient.getInstance().getConfiguration();
+
+
+        // Add code to instantiate a AmazonDynamoDBClient
+        AmazonDynamoDBClient dynamoDBClient = new AmazonDynamoDBClient(credentialsProvider);
+
+
+        this.dynamoDBMapper = DynamoDBMapper.builder()
+                .dynamoDBClient(dynamoDBClient)
+                .awsConfiguration(configuration)
+                .build();
+
+        Runnable runnable = new Runnable() {
+            public void run() {
+                Log.d("something", "stuff");
+                NotesDO notes = new NotesDO();
+
+                notes.setUserId("CREN");
+
+                notes.setNoteId("2");
+
+                notes.setContent("poop");
+
+                notes.setCreationDate(1D);
+
+                notes.setTitle("poop");
+
+                try {
+                    dynamoDBMapper.save(notes);
+                } catch (Exception e) {
+                    e.printStackTrace(pw);
+                    String sStackTrace = sw.toString(); // stack trace as a string
+                    Log.d("inTheEther",sStackTrace);
+                    Log.d("shit","!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n\n");
+                }
+            };
+            };
+        Thread mythread = new Thread(runnable);
+        mythread.start();
+
 
         setContentView(R.layout.activity_main_bottom);
 
