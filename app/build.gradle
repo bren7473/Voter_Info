@@ -21,6 +21,8 @@ android {
 
 dependencies {
     //implementation 'com.amazonaws:aws-android-sdk-ddb-mapper:2.2.+'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okhttp:okhttp:2.5.0'
     implementation 'com.amazonaws:aws-android-sdk-ddb-mapper:2.6.+'
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'com.koushikdutta.ion:ion:2.+'

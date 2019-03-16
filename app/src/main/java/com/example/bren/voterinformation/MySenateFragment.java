@@ -79,7 +79,7 @@ public class MySenateFragment extends Fragment {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        // Do something with response
+                        // Use response
                         //mTextView.setText(response.toString());
 
                         // Process the JSON

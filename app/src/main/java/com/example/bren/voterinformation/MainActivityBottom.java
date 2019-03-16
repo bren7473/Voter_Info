@@ -98,6 +98,12 @@ public class MainActivityBottom extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*
+        for ((i=0;i<=300;i+=20));
+        do curl -H "Kjmolj8XJcf4DXcJ0XW5spASVlK3mHEysvmhqQP0"
+        "https://api.propublica.org/congress/v1/statements/search.json?query=MY_SEARCH_TERM_HERE&offset=$i";
+        done > file.json
+
 
         AWSMobileClient.getInstance().initialize(this, new AWSStartupHandler() {
             @Override
@@ -121,6 +127,7 @@ public class MainActivityBottom extends AppCompatActivity {
                 .dynamoDBClient(dynamoDBClient)
                 .awsConfiguration(configuration)
                 .build();
+
 
         Runnable runnable = new Runnable() {
             public void run() {
@@ -147,8 +154,10 @@ public class MainActivityBottom extends AppCompatActivity {
                 }
             };
             };
+
         Thread mythread = new Thread(runnable);
         mythread.start();
+        */
 
 
         setContentView(R.layout.activity_main_bottom);

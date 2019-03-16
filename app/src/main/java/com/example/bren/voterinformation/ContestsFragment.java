@@ -20,15 +20,21 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.koushikdutta.ion.Ion;
+import com.squareup.okhttp.OkHttpClient;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import static android.content.Context.MODE_PRIVATE;
 import static com.example.bren.voterinformation.Login.PREFERENCE;
+import static com.google.gson.internal.bind.TypeAdapters.URL;
 
 
 /**
@@ -174,6 +180,42 @@ public class ContestsFragment extends Fragment {
 
                 // Add JsonObjectRequest to the RequestQueue
                 requestQueue.add(jsonObjectRequest);
+/*
+        String url = "https://api.propublica.org/congress/v1/statements/search.json?query=MY_SEARCH_TERM_HERE&offset=$i";
+
+
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+                .url("https://api.propublica.org/congress/v1/statements/search.json?query=MY_SEARCH_TERM_HERE&offset=$i")
+                .header("Authorization", "\"X-API-KEY: Kjmolj8XJcf4DXcJ0XW5spASVlK3mHEysvmhqQP0\"")
+                .url("https://api.github.com/users/vogella")
+                .build();
+        public static String getResponseFromHttpUrl(URL url) throws IOException {
+
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.addRequestProperty("Accept","application/json");
+            connection.addRequestProperty("Content-Type","application/json");
+            connection.addRequestProperty("Authorization","X-API-KEY: Kjmolj8XJcf4DXcJ0XW5spASVlK3mHEysvmhqQP0");
+
+            try {
+                InputStream in = connection.getInputStream();
+
+                Scanner scanner = new Scanner(in);
+                scanner.useDelimiter("\\A");
+
+                boolean hasInput = scanner.hasNext();
+                if (hasInput) {
+                    return scanner.next();
+                } else {
+                    return null;
+                }
+            } finally {
+                connection.disconnect();
+            }
+        }
+        */
 
                 customAdapter = new CustomAdapter();
                 listView.setAdapter(customAdapter);

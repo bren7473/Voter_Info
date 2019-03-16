@@ -2,10 +2,10 @@
 <resources>
     <color name="colorPrimaryDark">#252c50</color>
     <color name="colorPrimary">#3a4691</color>
-    <color name="colorAccent">#d2fcf9ee</color>
-    <color name="splash">#b9de4848</color>
+    <color name="colorAccent">#fcf9ee</color>
+    <color name="splash">#b9df3d3d</color>
     <color name="darkGray">#393939</color>
     <color name="transBlue">#dc3b49a0</color>
     <color name="creamBackground">#dcfdf8dd</color>
-    <color name="redBackground">#dcd54442</color>
+    <color name="redBackground">#dcdc3a38</color>
 </resources>
